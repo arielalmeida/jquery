@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      
+   
+</head>
+<body>
+<hr>
+<hr>
+    <div>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+        <p>d</p>
+        <p>e</p>
+        <p>f</p>
+        <p>g</p>
+    </div>
+    <hr>
+    <hr>
+    <div>
+        <!--muestra contenido oculto-->
+        <button class="but">Mostrar contenido oculto</button>
+        <div class="div" style="display: none;">
+            <p>hola</p>
+        </div>  
+    </div>
+    <hr>
+    <hr>
+    <div>
+    <label for="">acepta los terminos y condiciones?</label>
+    <input type="checkbox" name="" id="habilitar">
+    <button id="deshabilitar" disabled type="submit">Enviar</button>
+    </div>
+<hr>
+<hr>
+    <div>
+        <p><a id="cambiodePag" href="https://www.google.com">google</a></p>
+        <button class="cambioCon">otra ayuda?</button>
+    </div>
+    <hr>
+    <hr>
+
+   <script>  
+   //crea una alerta que esta listo el documento
+   $(function(){
+            $(document).ready(function(){
+                alert('Ready');
+            })
+        })
+    //Cambia color de fondo de las "p"
+    $(document).ready(function(){
+        let todoslosp= $('p');
+        todoslosp.each(function(index){
+            let elementos = $(this);
+            if(index%2==0){
+                elementos.css('background-color','#eee');
+            }else{
+                elementos.css('background-color','lightblue');
+            };
+        });
+    });  
+    //muestra contenido oculto .
+    $(document).ready(function(){
+        $('.but').click(function(){
+            $('.div').show();
+        });
+    });
+//agrega un P al final de body
+    $(document).ready(function(){
+        $('body').after('<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>');
+    });
+ //cambia contenido del href y se dirije a otra pagina   
+    $(document).ready(function(){
+        $('.cambioCon').click(function(){
+            $("#cambiodePag").attr({
+              "href":"https://www.stackoverflow.com"
+            });
+        });
+    });
+
+    $(document).ready(function(){
+        let miChek = $("#habilitar");
+        let botones = $("button.clasesubmit");
+        miChek.change(function(){
+            let otraVez = $(this);
+          checkeado = otravez.prop('checked');
+            if(checkeado){
+                $('#deshabilitar').prop('disabled',true);
+            }else{
+                $('#deshabilitar').prop('disabled',false);
+            };
+        });
+    });
+
+  </script> 
+</body>
+</html>
