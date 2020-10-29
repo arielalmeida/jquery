@@ -77,15 +77,16 @@
  //cambia contenido del href y se dirije a otra pagina   
     $(document).ready(function(){
         $('.cambioCon').click(function(){
+            $("#cambiodePag").html("https://www.stackoverflow.com");
             $("#cambiodePag").attr({
               "href":"https://www.stackoverflow.com"
             });
         });
     });
+        
 
     $(document).ready(function(){
         let miChek = $("#habilitar");
-        let botones = $("button.clasesubmit");
         miChek.change(function(){
             let otraVez = $(this);
           checkeado = otravez.prop('checked');

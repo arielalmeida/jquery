@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&family=Syne+Mono&display=swap');
+
+a{
+    text-decoration: none;
+}
+#roboto{
+    font-family: 'Roboto', sans-serif;
+}
+#oswald{
+    font-family: 'Oswald', sans-serif;
+}
+#amarilloVerde{
+    color: #9ACD32;
+}
+#tomate{
+    color: #FF6347;
+}
+#cerceta{
+    color: #008080;
+}
